@@ -93,7 +93,22 @@ end
 
 #---------------------------------------------------
 
-#18..19 customer can afford pet? - fail
+#18..19 customer can afford pet? - test pass 11/05/19
 def customer_can_afford_pet(customer, pet)
   customer[:cash] >= pet[:price]
+end
+
+#20..22 sell a pet to a customer - test pass 12/05/19
+#change customer pet count, pet sold, cust cash, total cash.
+def sell_pet_to_customer(pet_shop, pet, customer)
+  for l_pet_shop in pet_shop[:pets]
+    if l_pet_shop == pet
+      if customer_can_afford_pet(customer, pet) == true
+        remove_customer_cash(customer, pet[:price])
+        add_or_remove_cash(pet_shop, pet[:price])
+        add_pet_to_customer(customer, pet)
+        increase_pets_sold(pet_shop, 1)
+      end
+    end
+  end
 end
