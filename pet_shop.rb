@@ -66,11 +66,34 @@ def remove_pet_by_name(pet_shop, name)
   pet_shop[:pets].delete_at(pet)
 end
 
-#   pet = []
-#   for l_pet_shop in pet_shop[:pets]
-#     if l_pet_shop[:name] == name
-#       pet.push.index(l_pet_shop)
-#     end
-#   end
-#   pet_shop[:pets].delete_at(pet)
-# end
+#13 pet shop add shtock - test pass 11/05/19
+def add_pet_to_stock(pet_shop, pet)
+  pet_shop[:pets].push(pet)
+end
+
+#14 customer cash - test pass 11/05/19
+def customer_cash(customer)
+  return customer[:cash]
+end
+
+#15 customer remove cash - test pass 11/05/19
+def remove_customer_cash(customer, value)
+  customer[:cash] -= value
+end
+
+#16 customer count of pets - test pass 11/05/19
+def customer_pet_count(customer)
+  return customer[:pets].count()
+end
+
+#17 add pet to a customer - test pass 11/05/19
+def add_pet_to_customer(customer, pet)
+  customer[:pets].push(pet)
+end
+
+#---------------------------------------------------
+
+#18..19 customer can afford pet? - fail
+def customer_can_afford_pet(customer, pet)
+  customer[:cash] >= pet[:price]
+end
