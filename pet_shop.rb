@@ -1,6 +1,8 @@
 
-  #Graham Cowan Code Clan homework ex.wk1d5 10/05/2019
-  #pet shop tdd - function ruby practice
+  ##Graham Cowan Code Clan homework ex.wk1d5 10/05/2019
+  ##pet shop tdd - function ruby practice
+
+  #N.B. limitation to unique pet name per pet shop!
 
 
 #1 pet shop name - test pass 10/05/19
